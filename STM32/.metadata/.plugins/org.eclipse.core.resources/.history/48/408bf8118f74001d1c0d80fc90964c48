@@ -9,7 +9,7 @@
 
 int TIME_CYCLE; // Time cycle
 
-// Define array list of task and variable count number of tasks
+// Array list of task and variable count number of tasks
 sTasks SCH_tasks_G[SCH_MAX_TASKS];
 uint8_t current_index_task = 0;
 

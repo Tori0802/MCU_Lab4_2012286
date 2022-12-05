@@ -1121,6 +1121,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  // Normal Task
   SCH_Add_Task(led1, 500, 500);
  8000bae:	f44f 72fa 	mov.w	r2, #500	; 0x1f4
  8000bb2:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
@@ -1146,11 +1147,13 @@ int main(void)
  8000bea:	f640 11c4 	movw	r1, #2500	; 0x9c4
  8000bee:	480f      	ldr	r0, [pc, #60]	; (8000c2c <main+0x9c>)
  8000bf0:	f000 f9d2 	bl	8000f98 <SCH_Add_Task>
+  // "One shot" task
   SCH_Add_Task(ledo1, 2000, 0);
  8000bf4:	2200      	movs	r2, #0
  8000bf6:	f44f 61fa 	mov.w	r1, #2000	; 0x7d0
  8000bfa:	480d      	ldr	r0, [pc, #52]	; (8000c30 <main+0xa0>)
  8000bfc:	f000 f9cc 	bl	8000f98 <SCH_Add_Task>
+  // Task with Led and Button
   SCH_Add_Task(ledb1, TIME_CYCLE, TIME_CYCLE);
  8000c00:	4b0c      	ldr	r3, [pc, #48]	; (8000c34 <main+0xa4>)
  8000c02:	681b      	ldr	r3, [r3, #0]

@@ -125,15 +125,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  // Normal Task
   SCH_Add_Task(led1, 500, 500);
   SCH_Add_Task(led2, 1000, 1000);
   SCH_Add_Task(led3, 1500, 1500);
   SCH_Add_Task(led4, 2000, 2000);
   SCH_Add_Task(led5, 2500, 2500);
-  // "One shot" task
   SCH_Add_Task(ledo1, 2000, 0);
-  // Task with Led and Button
   SCH_Add_Task(ledb1, TIME_CYCLE, TIME_CYCLE);
   while (1)
   {
